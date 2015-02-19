@@ -4,9 +4,11 @@
 <script>
 function rbyte() { return Math.floor(256 * Math.random()); }
 function rcolor() { return 'rgb(' + rbyte() + ',' + rbyte() + ',' + rbyte() + ')'; }
+function change() { document.body.style.backgroundColor = rcolor(); }
+window.onload = change;
 window.addEventListener('keydown', function (event) {
     if (event.keyCode == 32) // SPACEBAR
-        document.body.style.backgroundColor = rcolor();
+        change();
 });
 </script>
 <style>
